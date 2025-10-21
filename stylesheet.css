@@ -88,3 +88,104 @@ nav a:hover {
   background: rgba(255, 255, 255, 0.1);
   box-shadow: 0 4px 12px rgba(212, 180, 131, 0.3);
 }
+
+/* =================================== HERO SECTION =================================== */
+
+.hero {
+  background: linear-gradient(135deg, rgba(20, 20, 20, 0.7) 0%, rgba(0, 0, 0, 0.5) 100%), 
+              url("https://i.ibb.co/G3sMMh4J/Try.jpg") center/cover no-repeat;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  border-bottom: 5px solid #d4b483;
+}
+
+.hero-text h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3.2rem;
+  color: #fcf0d6;
+  margin-bottom: 0.3em;
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 180, 131, 0.3);
+  letter-spacing: 2px;
+}
+
+@keyframes glow {
+  0%, 100% { text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.8), 0 0 40px rgba(212, 180, 131, 0.5); }
+  50% { text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.9), 0 0 60px rgba(212, 180, 131, 0.8); }
+}
+
+.hero-text p {
+  font-size: 0.5rem;
+  color: #fcf0d6;
+  font-weight: 300;
+  letter-spacing: 3px;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7);
+  text-transform: uppercase;
+}
+
+.hero .hero-text {
+  position: relative;
+  z-index: 2;
+  animation: fadeInUp 1.5s ease-out;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at 30% 50%, rgba(212, 180, 131, 0.15), transparent 60%);
+  animation: pulse 8s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 0.6; }
+}
+
+.hero .hero-text p {
+  font-size: 1.2rem;
+  margin-bottom: 2em;
+}
+
+.underline {
+  width: 150px;
+  height: 5px;
+  background: linear-gradient(90deg, transparent, #d4b483, #ffd700, #d4b483, transparent);
+  margin: 1em auto 1.5em;
+  border-radius: 3px;
+  box-shadow: 0 0 25px rgba(212, 180, 131, 0.6);
+}
+
+.cta-button {
+  display: inline-block;
+  padding: 0.5em 3em;
+  background: linear-gradient(135deg, #d4b483 0%, #b8935f 100%);
+  color: #1a1a1a;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1rem;
+  box-shadow: 0 10px 30px rgba(212, 180, 131, 0.4);
+  transition: all 0.3s ease;
+  animation: fadeInUp 1.8s ease-out;
+}
+
+.cta-button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(212, 180, 131, 0.6);
+  background: linear-gradient(135deg, #b8935f 0%, #d4b483 100%);
+}
