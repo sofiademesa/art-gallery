@@ -4,45 +4,48 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Human Palette</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css"> <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="responsive.css"> <!-- RESPONSIVENESS STYLESHEET CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
   <!-- Header -->
-  <header>
-    <div class="nav-container">
-      <div class="logo">The Human Palette</div>
-      <nav>
-        <ul>
-          <li><a href="home.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="artist.html">Artists</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </nav>
-    </div>
-  </header>
+<header>
+  <div class="nav-container">
+    <div class="logo">The Human Palette</div>
 
-  
-    <!-- Hero -->
-    <section class="hero">
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="Artist.html">Artists</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+
+
+  <!-- Hero -->
+  <section class="hero">
     <div class="hero-text">
       <h1>The Human Palette</h1>
       <div class="underline"></div>
-      <p>Exploring the art that defines generations</p>
+      <p>Art that defines generations</p>
+      <a href="gallery.html" class="cta-button">Explore Our Collections</a>
     </div>
-    </section>
+  </section>
 
-    <!-- Section 1 -->
-    <section class="section light center">
-    <h2>Exploring the Past, Inspiring the Present</h2>
-    <p class="intro">
-      Discover our collections, learn about artists, and experience how creativity continues to shape the world.
-    </p>
-    </section>
-
-  <!-- Statistics -->
+  <!-- Stats Section -->
   <section class="stats-section">
     <div class="stat-card">
       <div class="stat-number">11+</div>
@@ -62,7 +65,7 @@
     </div>
   </section>
 
-   <!-- Featured Period -->
+  <!-- Featured Period -->
   <section class="featured-period">
     <div class="period-content">
       <div class="period-text">
@@ -82,7 +85,7 @@
     </div>
   </section>
 
-   <!-- Interactive Timeline -->
+  <!-- Interactive Timeline -->
   <section class="timeline-section">
     <h2>Journey Through Art History</h2>
     <div class="timeline">
@@ -121,10 +124,21 @@
     </div>
   </section>
 
-  <!-- Section 4 -->
+  <!-- Artist Showcase -->
   <section class="section light center">
     <h2>Highlights of Artistic Evolution</h2>
     <div class="gallery-scroll">
+      <img src="images/The Creation of Man.png" alt="The Creation of Man" loading="lazy">
+      <img src="images/BaroquePainting.png" alt="Baroque Painting" loading="lazy">
+      <img src="images/The School of Athens.webp" alt="The School of Athens" loading="lazy">
+      <img src="images/Liberty Leading the People.png" alt="Liberty Leading the People" loading="lazy">
+      <img src="images/The Gleaners.png" alt="The Gleaners" loading="lazy">
+      <img src="images/Impression, Sunrise.png" alt="Impression, Sunrise" loading="lazy">
+      <img src="images/The Cyclist.png" alt="The Cyclist" loading="lazy">
+      <img src="images/The Persistence of Memory.png" alt="The Cyclist" loading="lazy">
+      <img src="images/Abstract Art.png" alt="Abstract Art" loading="lazy">
+      <img src="images/Pop Art.png" alt="Pop Art" loading="lazy">
+      <img src="images/Digital Art.png" alt="Digital Art" loading="lazy">
     </div>
   </section>
 
@@ -140,8 +154,29 @@
       <p>0976-139-9924</p>
       <p>humanpalette@gmail.com</p>
       <div class="socials">
+        <i>🌐</i> <i>📷</i> <i>🎵</i>
       </div>
     </div>
   </footer>
+<script>
+  const menuToggle = document.getElementById('mobile-menu');
+  const nav = document.querySelector('nav');
+  const icon = menuToggle.querySelector('i');
+
+  menuToggle.addEventListener('click', () => {
+    nav.classList.toggle('active');
+    document.body.classList.toggle('menu-open');
+
+    // Toggle icons
+    if (nav.classList.contains('active')) {
+      icon.classList.remove('fa-bars');
+      icon.classList.add('fa-xmark');
+    } else {
+      icon.classList.add('fa-bars');
+      icon.classList.remove('fa-xmark');
+    }
+  });
+</script>
+
 </body>
 </html>
