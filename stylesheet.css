@@ -36,3 +36,55 @@ p {
   font-weight: 300;
 }
 
+/* =================================== HEADER & NAVIGATION =================================== */
+
+header {
+  background: linear-gradient(135deg, #8b0000 0%, #6d0000 50%, #780000 100%);
+  color: #fff;
+  padding: 0.5em 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  border-bottom: 3px solid #d4b483;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.nav-container {
+  width: 88%;
+  max-width: 1600px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Playfair Display", serif;
+  font-size: 1.2rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 0.5em;
+}
+
+nav a {
+  color: #fffaf0;
+  text-decoration: none;
+  font-weight: 400;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  padding: 0.7em 1.5em;
+  border-radius: 8px;
+  letter-spacing: 0.5px;
+}
+
+nav a:hover {
+  color: #d4b483;
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 12px rgba(212, 180, 131, 0.3);
+}
