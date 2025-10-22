@@ -1254,5 +1254,280 @@ figure {
   line-height: 1.5;
 }
 
+/* ================================================================ CONTACT PAGE =========================================================== */
+/* --------------------------------------------------------------- CONTACT SECTION --------------------------------------------------------- */
+
+.contact-section {
+  padding: 6rem 8%;
+  background: linear-gradient(180deg, #faf8f3 0%, #f6f2e9 100%);
+}
+
+.contact-container {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* ------------------------------------------------------ CONTACT FORM ------------------------------------------------------------------- */
+.contact-form-wrapper {
+  background: white;
+  padding: 3rem;
+  border-radius: 12px;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  border-left: 6px solid #c2a060;
+}
+
+.contact-form-wrapper h2 {
+  font-size: 2rem;
+  color: #103b5c;
+  margin-bottom: 1.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #174a6e;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 1rem;
+  border: 2px solid rgba(194, 160, 96, 0.3);
+  border-radius: 8px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  background: #fdfcf9;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: #c2a060;
+  box-shadow: 0 0 0 4px rgba(194, 160, 96, 0.15);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+.submit-btn,
+.reset-btn {
+  flex: 1;
+  padding: 1rem;
+  background: linear-gradient(135deg, #c2a060 0%, #a8844f 100%);
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-size: 1.1rem;
+  cursor: pointer;
+  box-shadow: 0 10px 30px rgba(194, 160, 96, 0.4);
+  transition: all 0.3s ease;
+}
+
+.submit-btn:hover,
+.reset-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 40px rgba(194, 160, 96, 0.6);
+}
+
+/* ---------------------------------------------------- CONTACT INFO SIDEBAR ------------------------------------------------------------ */
+.contact-info-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.contact-info-wrapper h2 {
+  font-size: 2rem;
+  color: #103b5c;
+  margin-bottom: 0.5rem;
+}
+
+.info-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12);
+}
+
+.info-icon {
+  font-size: 2rem;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(194, 160, 96, 0.15), rgba(194, 160, 96, 0.05));
+  border-radius: 10px;
+  flex-shrink: 0;
+}
+
+.info-content h4 {
+  font-size: 1.1rem;
+  color: #103b5c;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.info-content p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #2c2c2c;
+}
+
+.social-links {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  color: #174a6e;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  background: rgba(194, 160, 96, 0.1);
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+}
+
+.social-link:hover {
+  background: rgba(194, 160, 96, 0.2);
+  transform: translateY(-2px);
+}
+
+/* ---------------------------------------------------------------  INQUIRY TABLE CARD ---------------------------------------------------- */
+.inquiry-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+}
+
+.inquiry-card h4 {
+  font-size: 1.1rem;
+  color: #103b5c;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.inquiry-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.inquiry-table th {
+  background: linear-gradient(135deg, #c2a060 0%, #b18b5b 100%);
+  color: white;
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 0.8rem 0.8rem;
+  font-size: 0.75rem;
+  letter-spacing: 0.5px;
+}
+
+.inquiry-table td {
+  padding: 0.9rem 0.8rem;
+  border-bottom: 1px solid #f0f0f0;
+  color: #333;
+}
+
+.inquiry-table tbody tr:nth-child(even) {
+  background-color: #f6f2e9;
+}
+
+.inquiry-table tbody tr:hover {
+  background-color: rgba(194, 160, 96, 0.1);
+  transition: background 0.3s ease;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.form-buttons button {
+  flex: 1;
+  padding: 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* --------------------------------------------------------------- FOOTER ----------------------------------------------------------- */
+footer {
+  background-color: #7b0000;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 100px;
+}
+
+footer h4 {
+  margin-bottom: 10px;
+}
+
+footer p {
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+footer a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+footer a:hover {
+  color: #fffaf0;
+}
+
+.socials a {
+  font-size: 1.2rem;
+  margin-right: 1em;
+}
+
+.copy {
+  margin-top: 15px;
+}
 
 
