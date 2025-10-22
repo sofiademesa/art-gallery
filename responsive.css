@@ -1,0 +1,1001 @@
+/* ==========================================   RESPONSIVE STYLES - ALL PAGES  ========================================== */
+/* ------------------------------------------   BASE STYLES (Mobile-First) ---------------------------------------------- */
+
+.menu-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: #fffaf0;
+  cursor: pointer;
+  margin-right: 1.5rem;
+  z-index: 1001;
+  transition: all 0.3s ease;
+}
+
+.menu-toggle:hover {
+  color: #d4b483;
+}
+
+body.menu-open {
+  overflow: hidden;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 0.5em;
+  margin-right: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* ========================================  DESKTOP & LARGE SCREENS (min-width: 769px)  ======================================== */
+@media (min-width: 769px) {
+
+  .hero-text {
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .hero-text h1 {
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .hero-text p {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* ========================================  LARGE TABLET / SMALL DESKTOP (1025px - 1200px) ======================================== */
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .artist-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+  }
+
+  .artist-card img {
+    height: 240px;
+  }
+}
+
+/* ======================================== TABLET STYLES (768px - 1024px)  ======================================== */
+@media (max-width: 1024px) {
+
+  /* Grid Layouts - 2 columns */
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2em;
+    padding: 3em 5%;
+  }
+
+  /* Idea Stats - Better layout on tablet */
+  .idea-stats {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+  }
+
+  .idea-stat {
+    flex: 1 1 calc(50% - 0.75em); 
+    min-width: 250px;
+    max-width: 350px;
+  }
+
+  .idea-stat:last-child {
+    flex: 1 1 calc(50% - 0.75em); 
+    max-width: 350px;
+  }
+
+  /* Single Column Layouts */
+  .period-content,
+  .forward-content,
+  .mv-container,
+  .contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  /* Contact Page - Tablet */
+   .contact-container {
+    gap: 2.5rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-info-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .info-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .info-icon {
+    flex-shrink: 0;
+    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .info-content p {
+    font-size: 0.88rem;
+  }
+
+  /* Keep social links horizontal on tablet */
+  .social-links {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 0.4rem;
+    margin-top: 0.3rem; 
+    justify-content: flex-start; 
+  }
+
+  .social-link {
+    padding: 0.5rem 0.7rem; 
+    font-size: 0.8rem; 
+    white-space: nowrap; /
+  }
+
+  /* Typography */
+  .stat-number {
+    font-size: 3rem;
+  }
+
+  .period-text h2 {
+    font-size: 2.3rem;
+  }
+
+  /* Gallery & Cards  */
+  .period-gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    align-items: center;
+    width: 100%;
+  }
+
+  .period-gallery img {
+    width: 100% !important;
+    max-width: 100% !important;
+    height: auto !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    display: block;
+  }
+
+  /* Hide the second image only on tablet */
+  .period-gallery img:nth-child(2) {
+    display: none !important;
+  }
+
+  .idea-stat,
+  .stat-card {
+    padding: 1.5em;
+  }
+
+  /* Timeline Adjustments */
+  .timeline::before {
+    left: 30px;
+  }
+
+  .timeline-item {
+    flex-direction: row !important;
+    padding-left: 80px;
+  }
+
+  .timeline-content {
+    width: 100%;
+  }
+
+  .timeline-dot {
+    left: 30px;
+  }
+
+  /* Artist Grid  */
+  .artist-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.8em;
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .artist-card {
+    display: grid !important;
+    grid-template-columns: 240px 1fr !important;
+    height: 200px !important;  
+    min-height: 200px !important; 
+  }
+
+  .artist-card:last-child:nth-child(odd) {
+    grid-column: auto;
+    max-width: none;
+    margin: 0;
+  }
+
+  .artist-category {
+    padding: 2.5em 7%;
+  }
+
+  .artist-category h2 {
+    font-size: 1.8rem;
+    margin-bottom: 1.5em;
+  }
+
+  .artist-card img {
+    height: 200px !important;  
+    width: 240px !important;
+    object-fit: cover;
+  }
+
+  .artist-info {
+    padding: 1.1rem 1.4rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .artist-info h3 {
+    font-size: 1.15rem !important;
+    margin-bottom: 0.3rem;
+  }
+
+  .artist-info .dates {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .artist-info .style {
+    font-size: 1rem !important;
+    margin-bottom: 0.35rem;
+  }
+
+  .artist-info .work {
+    font-size: 0.85rem !important;
+    line-height: 1.4;
+  }
+
+  footer .footer-right {
+    display: none !important;
+  }
+
+  .core-image {
+    margin-top: 0.5em !important;
+  }
+
+    .core-image .image-frame {
+    padding: 6px;
+    border-radius: 14px;
+  }
+  
+}
+
+/* ========================================  MOBILE STYLES (max-width: 768px)  ======================================== */
+@media (max-width: 768px) {
+  
+  /* ===== NAVIGATION ===== */
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d2b3e 0%, #1a3a4f 100%);
+    transition: right 0.4s ease;
+    z-index: 1000;
+    padding-top: 80px;
+    box-shadow: -5px 0 20px rgba(0, 0, 0, 0.5);
+  }
+
+  nav.active {
+    right: 0;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 2em;
+    gap: 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .nav-links a {
+    display: block;
+    padding: 1.2em 1em;
+    font-size: 1.1rem;
+    width: 100%;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  /* ===== HEADER ===== */
+  .nav-container {
+    padding: 1em 5%;
+  }
+
+  .logo {
+    font-size: 1.3rem;
+  }
+
+  /* ===== HERO SECTION ===== */
+  .hero-text {
+    padding: 0 5%;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+    max-width: 100%;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .cta-button {
+    padding: 0.9em 2em;
+    font-size: 0.95rem;
+  }
+
+  /* ===== STATS SECTION ===== */
+  .stats-section {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+    padding: 3em 5%;
+  }
+
+  .stat-card {
+    padding: 1.5em;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+  }
+
+  /* ===== FEATURED PERIOD ===== */
+  .featured-period {
+    padding: 4em 5%;
+  }
+
+  .period-content {
+    grid-template-columns: 1fr;
+    gap: 2em;
+  }
+
+  .period-text h2 {
+    font-size: 2rem;
+  }
+
+  .period-text p {
+    font-size: 1rem;
+  }
+
+  .period-gallery {
+    grid-template-columns: 1fr;
+    gap: 1em;
+  }
+
+  .period-gallery img:first-child {
+    grid-column: span 1;
+    height: 250px;
+  }
+
+  .period-gallery img {
+    height: 200px;
+  }
+
+  /* ===== TIMELINE SECTION ===== */
+  .timeline-section {
+    padding: 4em 5%;
+  }
+
+  .timeline-section h2 {
+    font-size: 2rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    padding-left: 60px;
+  }
+
+  .timeline-content {
+    padding: 1.5em;
+  }
+
+  .timeline-date {
+    font-size: 1.5rem;
+  }
+
+  .timeline-title {
+    font-size: 1.1rem;
+  }
+
+  .timeline-desc {
+    font-size: 0.9rem;
+  }
+
+  .timeline-dot {
+    left: 20px;
+    width: 16px;
+    height: 16px;
+  }
+
+  /* ===== GALLERY SECTION ===== */
+  .section {
+    padding: 4em 5%;
+  }
+
+  .section h2 {
+    font-size: 2rem;
+  }
+
+  .section p.intro {
+    font-size: 1rem;
+    padding: 0;
+  }
+
+  .gallery-scroll {
+    padding: 2em 0;
+    gap: 1.5em;
+  }
+
+  .gallery-scroll img {
+    height: 250px;
+    width: 350px;
+    border-width: 6px;
+  }
+
+  /* ==== ARTIST SPOTLIGHT =====*/
+    .artist-spotlight .spotlight-image {
+    display: none;
+  }
+  
+  /* ===== IDEA SECTION ===== */
+  .idea-section {
+    padding: 4em 5%;
+  }
+
+  .idea-container h2 {
+    font-size: 2rem;
+  }
+
+  .idea-quote {
+    padding: 2em 1.5em;
+    margin-bottom: 2em;
+  }
+
+  .quote-mark {
+    font-size: 3rem;
+    top: 20px;
+    left: 15px;
+  }
+
+  .quote-mark.closing {
+    bottom: 10px;
+    right: 15px;
+  }
+
+  .idea-quote p {
+    font-size: 1rem;
+  }
+
+  .idea-video video {
+    width: 100%;
+  }
+
+  .idea-body {
+    font-size: 1rem;
+  }
+
+  .idea-stats {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .idea-stat {
+    padding: 1.5em;
+  }
+
+  .stat-icon {
+    font-size: 2rem;
+  }
+
+  /* ===== ARTIST SECTION ===== */
+  .artist-category {
+    padding: 2em 5%;
+  }
+
+  .artist-category h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
+  }
+
+  .artist-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5em;
+    padding: 0 1em;
+  }
+
+  .artist-card {
+    display: grid !important;
+    grid-template-columns: 160px 1fr !important;
+    height: 180px !important;  
+    min-height: 180px !important; 
+  }
+
+  .artist-card img {
+    height: 180px !important;  
+    width: 160px !important;
+    object-fit: cover;
+  }
+
+  .artist-info {
+    padding: 0.9rem 1rem !important;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .artist-info h3 {
+    font-size: 1.05rem !important;
+    margin-bottom: 0.25rem;
+  }
+
+  .artist-info .dates {
+    font-size: 0.8rem !important;
+    margin-bottom: 0.2rem;
+  }
+
+  .artist-info .style {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.3rem;
+  }
+
+  .artist-info .work {
+    font-size: 0.75rem !important;
+    line-height: 1.4;
+  }
+  
+  /* ===== CONTACT PAGE ===== */
+  .contact-section {
+    padding: 4rem 5%;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .contact-form-wrapper {
+    padding: 2rem 1.5rem;
+  }
+
+  .contact-form-wrapper h2,
+  .contact-info-wrapper h2 {
+    font-size: 1.7rem;
+  }
+
+  .contact-form {
+    gap: 1.2rem;
+  }
+
+  .form-group label {
+    font-size: 0.95rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.9rem;
+    font-size: 0.95rem;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .form-buttons {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .submit-btn,
+  .reset-btn {
+    width: 100%;
+    padding: 0.9rem;
+    font-size: 1rem;
+  }
+
+  .info-card {
+    padding: 1.2rem;
+    gap: 1rem;
+  }
+
+  .info-icon {
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-content h4 {
+    font-size: 1rem;
+  }
+
+  .info-content p {
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 0.5rem; 
+    margin-top: 0.3rem; 
+  }
+
+  .social-link {
+    padding: 0.55rem 0.85rem; 
+    font-size: 0.85rem;
+  }
+
+  /* ===== FOOTER ===== */
+    footer {
+      flex-direction: column;
+      text-align: center;
+      gap: 2em;
+      padding: 3em 5%;
+    }
+
+    .footer-left,
+    .footer-right {
+      width: 100%;
+    }
+
+    .footer-section:last-child {
+      display: none;
+    }
+
+}
+
+/* ========================================  SMALL MOBILE (max-width: 480px) ======================================== */
+@media (max-width: 480px) {
+  /* Navigation */
+  nav {
+    width: 85%;
+  }
+
+  /* Hero Section */
+  .hero-text h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-text p {
+    font-size: 0.9rem;
+    max-width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Typography - Headings */
+  .period-text h2,
+  .timeline-section h2,
+  .section h2,
+  .idea-container h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Gallery */
+  .gallery-scroll img {
+    height: 200px;
+    width: 280px;
+  }
+
+  /* Stats */
+  .stat-number {
+    font-size: 2rem;
+  }
+
+  /* Artist Section */
+  .artist-category {
+    padding: 1.5em 4%;
+  }
+
+  .artist-category h2 {
+    font-size: 1.3rem;
+    margin-bottom: 1.2em;
+  }
+
+  .artist-grid {
+    gap: 1.5em;
+    padding: 0 0.5em;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-card img {
+    height: 200px;
+  }
+
+  .artist-info {
+    padding: 0.8rem 0.8rem;
+  }
+
+  .artist-info h3 {
+    font-size: 1rem;
+  }
+
+  .artist-info .dates {
+    font-size: 0.8rem;
+  }
+
+  .artist-info .style {
+    font-size: 0.9rem;
+  }
+
+  .artist-info .work {
+    font-size: 0.75rem;
+    line-height: 1.4;
+  }
+
+  /* Contact Page */
+  .contact-section {
+    padding: 3rem 5%;
+  }
+
+  .contact-form-wrapper {
+    padding: 1.5rem 1rem;
+  }
+
+  .contact-form-wrapper h2,
+  .contact-info-wrapper h2 {
+    font-size: 1.5rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.8rem;
+    font-size: 0.9rem;
+  }
+
+  .submit-btn,
+  .reset-btn {
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .info-card {
+    padding: 1rem;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-icon {
+    width: 55px;
+    height: 55px;
+    font-size: 1.8rem;
+  }
+
+  .inquiry-card {
+    display: none;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 0.3rem; 
+    margin-top: 0.3rem; 
+    justify-content: flex-start;
+  }
+
+  .social-link {
+    padding: 0.45rem 0.6rem; 
+    font-size: 0.75rem; 
+    white-space: nowrap; 
+    flex: 1; 
+    text-align: center; 
+  }
+}
+
+/* ========================================  EXTRA SMALL MOBILE (max-width: 425px)  ======================================== */
+@media (max-width: 425px) {
+  .stats-section {
+    grid-template-columns: 1fr;
+  }
+
+  .artist-grid,
+  .collections-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-text h1 {
+    font-size: 1.6rem;
+  }
+
+  .hero-text p {
+    font-size: 0.85rem;
+    max-width: 100%;
+  }
+
+  .gallery-scroll img {
+    width: 250px;
+    height: 180px;
+  }
+}
+
+/* ========================================  LANDSCAPE MOBILE FIX  ======================================== */
+@media (max-height: 500px) and (orientation: landscape) {
+  nav {
+    overflow-y: auto;
+    padding-top: 60px;
+  }
+
+  .nav-links a {
+    padding: 0.8em 1em;
+  }
+}
+
+/* ======================================== PRINT STYLES ======================================== */
+@media print {
+  .menu-toggle,
+  nav,
+  .cta-button,
+  footer .socials,
+  .form-buttons {
+    display: none !important;
+  }
+
+  body {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Hero Section */
+  .hero-text h1 {
+    font-size: 2rem;
+    color: #000;
+    page-break-after: avoid;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+    color: #333;
+  }
+
+  /* Artist Section */
+  .artist-category {
+    padding: 1.5em 1em;
+    background: white !important;
+    page-break-inside: avoid;
+  }
+
+  .artist-category h2 {
+    font-size: 1.4rem;
+    color: #000;
+    margin-bottom: 1em;
+    page-break-after: avoid;
+  }
+
+  .artist-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5em;
+    page-break-inside: auto;
+  }
+
+  .artist-card {
+    background: white;
+    border: 1px solid #ddd;
+    box-shadow: none;
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+
+  .artist-card:hover {
+    transform: none;
+    box-shadow: none;
+  }
+
+  .artist-card img {
+    height: 180px;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .artist-info {
+    padding: 0.8rem;
+    color: #000 !important;
+  }
+
+  .artist-info h3 {
+    color: #000 !important;
+    font-size: 0.95rem;
+  }
+
+  .artist-info .dates,
+  .artist-info .style,
+  .artist-info .work {
+    color: #333 !important;
+    font-size: 0.8rem;
+  }
+
+  /* Contact Page */
+  .contact-form-wrapper {
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+  }
+
+  .contact-form-wrapper h2 {
+    color: #000;
+    font-size: 1.4rem;
+  }
+
+  .form-group label {
+    color: #000;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    border: 1px solid #999;
+  }
+
+  .info-card {
+    border: 1px solid #ddd;
+    page-break-inside: avoid;
+    margin-bottom: 1em;
+  }
+
+  .inquiry-table {
+    border: 1px solid #999;
+  }
+
+  .inquiry-table th {
+    background: #f0f0f0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  /* General Print Optimizations */
+  .section {
+    page-break-inside: avoid;
+  }
+
+  h1, h2, h3, h4 {
+    page-break-after: avoid;
+  }
+
+  img {
+    page-break-inside: avoid;
+  }
+}
