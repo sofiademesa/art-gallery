@@ -8,12 +8,28 @@
   <link rel="stylesheet" href="responsive.css"> <!-- RESPONSIVENESS STYLESHEET CSS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
 </head>
 <body>
+
   <!-- Header -->
 <header>
   <div class="nav-container">
-    <div class="logo">The Human Palette</div>
+    <!-- Logo -->
+    <div class="logo">
+      <a href="home.html" class="logo">
+        <div class="logo-img-wrapper">
+          <img src="media/thp_logo.png" alt="The Human Palette Logo" class="logo-img">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-text-main">The Human Palette</span>
+          <span class="logo-text-sub">Online Art Gallery</span>
+        </div>
+      </a>
+    </div>
 
     <!-- Hamburger Icon -->
     <div class="menu-toggle" id="mobile-menu">
@@ -32,8 +48,6 @@
     </nav>
   </div>
 </header>
-
-
 
   <!-- Hero -->
   <section class="hero">
@@ -78,9 +92,9 @@
         <p>Through every story told in color and form, we rediscover empathy, imagination, and the beauty of being human. </p>
       </div>
       <div class="period-gallery">
-        <img src="images/post-impressionism-art-style.jpg" alt="The Great Wave">
-        <img src="images/the-voyage-of-life-youth-1842-thomas-cole.jpg" alt="School of Athens">
-        <img src="images/ww4.jpg" alt="Renaissance Portrait">
+        <img src="images/home images/period gallery picture 1.jpg" alt="Period Gallery Image_Sunflowers">
+        <img src="images/home images/period gallery picture 2.jpg" alt="Period Gallery Image_The Voyage of Life">
+        <img src="images/home images/period gallery picture 3.jpg" alt="Period Gallery Image_Goward">
       </div>
     </div>
   </section>
@@ -143,21 +157,24 @@
   </section>
 
   <!-- Footer -->
-  <footer>
+ <footer>
     <div class="footer-left">
       <h4>The Human Palette</h4>
       <p>An online gallery presenting artworks from different periods, each showing a part of human creativity.</p>
       <p class="copy">@2025. All Rights Reserved</p>
     </div>
+   
     <div class="footer-right">
       <h4>Contact Us</h4>
-      <p>0976-139-9924</p>
-      <p>humanpalette@gmail.com</p>
+      <p><a href="tel:+639761399924">0976-139-9924</a></p>
+      <p><a href="mailto:humanpalette@gmail.com">humanpalette@gmail.com</a></p>
       <div class="socials">
-        <i>🌐</i> <i>📷</i> <i>🎵</i>
+        <a href="www.facebook.com/christructure" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+        <a href="https://www.instagram.com/thumanpalette/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        <a href="https://yourwebsite.com" target="_blank"><i class="fa-solid fa-globe"></i></a>
       </div>
-    </div>
   </footer>
+  
 <script>
   const menuToggle = document.getElementById('mobile-menu');
   const nav = document.querySelector('nav');
