@@ -79,10 +79,6 @@ header {
   transition: transform 0.3s ease;
 }
 
-.logo:hover {
-  transform: translateX(5px);
-}
-
 .logo-img-wrapper {
   width: 80px;
   height: 80px;
@@ -90,10 +86,6 @@ header {
   overflow: hidden;
   position: relative;
   flex-shrink: 0;
-}
-
-.logo:hover .logo-img-wrapper::before {
-  opacity: 1;
 }
 
 .logo-img {
