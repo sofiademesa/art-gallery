@@ -873,7 +873,9 @@ body.menu-open {
   nav,
   .cta-button,
   footer .socials,
-  .form-buttons {
+  .form-buttons,
+  button,
+  .no-print {
     display: none !important;
   }
 
@@ -999,3 +1001,4 @@ body.menu-open {
     page-break-inside: avoid;
   }
 }
+
