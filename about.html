@@ -4,34 +4,60 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Human Palette</title>
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="style.css"> <!-- EXTERNAL CSS -->
+  <link rel="stylesheet" href="responsive.css"> <!-- RESPONSIVENESS STYLESHEET CSS -->
+  <link rel="apple-touch-icon" sizes="180x180" href="media/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="media/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="media/favicon-16x16.png">
+  <link rel="shortcut icon" href="media/favicon.ico" type="image/x-icon">
+
 </head>
 <body>
   <!-- Header -->
   <header>
-    <div class="nav-container">
-      <div class="logo">The Human Palette</div>
-      <nav>
-        <ul>
-          <li><a href="#">Home</a></li>
-          <li><a href="#">About</a></li>
-          <li><a href="#">Gallery</a></li>
-          <li><a href="#">Artists</a></li>
-          <li><a href="#">Contact</a></li>
-        </ul>
-      </nav>
+    
+  <div class="nav-container">
+    <!-- Logo -->
+    <div class="logo">
+      <a href="home.html" class="logo">
+        <div class="logo-img-wrapper">
+          <img src="media/thp_logo.png" alt="The Human Palette Logo" class="logo-img">
+        </div>
+        <div class="logo-text-wrapper">
+          <span class="logo-text-main">The Human Palette</span>
+          <span class="logo-text-sub">Online Art Gallery</span>
+        </div>
+      </a>
     </div>
+
+    <!-- Hamburger Icon -->
+    <div class="menu-toggle" id="mobile-menu">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+      <ul class="nav-links">
+        <li><a href="home.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="Artist.html">Artists</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
   </header>
 
-    <!-- Hero -->
-    <section class="hero">
+  <!-- Hero -->
+  <section class="hero">
     <div class="hero-text">
-      <h1>The Human Palette</h1>
+      <h1>Beyond the Canvas</h1>
       <div class="underline"></div>
-      <p>Exploring the art that defines generations</p>
+      <p>The vision and purpose that shape the website.</p>
     </div>
-    </section>
+  </section>
 
   <!-- Footer -->
    <footer>
