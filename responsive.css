@@ -1,5 +1,5 @@
 /* ==========================================   RESPONSIVE STYLES - ALL PAGES  ========================================== */
-/* ------------------------------------------   BASE STYLES (Mobile-First) ---------------------------------------------- */
+/* ------------------------------------------   BASE STYLES  ------------------------------------------------------------ */
 
 .menu-toggle {
   display: none;
@@ -60,17 +60,17 @@ body.menu-open {
   }
 }
 
-/* ======================================== TABLET STYLES (768px - 1024px)  ======================================== */
+/* ======================================== TABLET STYLES (768px - 1024px)  ======================================================= */
 @media (max-width: 1024px) {
 
-  /* Grid Layouts - 2 columns */
+  /* ---- Index ---- */
   .stats-section {
     grid-template-columns: repeat(2, 1fr);
     gap: 2em;
     padding: 3em 5%;
   }
 
-  /* Idea Stats - Better layout on tablet */
+  /* ---- About ---- */
   .idea-stats {
     display: flex;
     flex-wrap: wrap;
@@ -89,7 +89,7 @@ body.menu-open {
     max-width: 350px;
   }
 
-  /* Single Column Layouts */
+  /* ---- Gallery ---- */
   .period-content,
   .forward-content,
   .mv-container,
@@ -97,59 +97,6 @@ body.menu-open {
     grid-template-columns: 1fr;
   }
 
-  /* Contact Page - Tablet */
-   .contact-container {
-    gap: 2.5rem;
-  }
-
-  .contact-form-wrapper,
-  .contact-info-wrapper {
-    max-width: 700px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .info-card {
-    display: flex !important;
-    flex-direction: row !important;
-    align-items: flex-start;
-    gap: 1rem;
-    padding: 1.2rem;
-  }
-
-  .info-icon {
-    flex-shrink: 0;
-    font-size: 1.8rem;
-    width: 45px;
-    height: 45px;
-  }
-
-  .info-content h4 {
-    font-size: 1rem;
-    margin-bottom: 0.4rem;
-  }
-
-  .info-content p {
-    font-size: 0.88rem;
-  }
-
-  /* Keep social links horizontal on tablet */
-  .social-links {
-    display: flex;
-    flex-direction: row; 
-    flex-wrap: nowrap; 
-    gap: 0.4rem;
-    margin-top: 0.3rem; 
-    justify-content: flex-start; 
-  }
-
-  .social-link {
-    padding: 0.5rem 0.7rem; 
-    font-size: 0.8rem; 
-    white-space: nowrap; /
-  }
-
-  /* Typography */
   .stat-number {
     font-size: 3rem;
   }
@@ -275,17 +222,68 @@ body.menu-open {
     margin-top: 0.5em !important;
   }
 
-    .core-image .image-frame {
+  .core-image .image-frame {
     padding: 6px;
     border-radius: 14px;
   }
-  
+
+   /* ---- Contact ---- */
+   .contact-container {
+    gap: 2.5rem;
+  }
+
+  .contact-form-wrapper,
+  .contact-info-wrapper {
+    max-width: 700px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .info-card {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: flex-start;
+    gap: 1rem;
+    padding: 1.2rem;
+  }
+
+  .info-icon {
+    flex-shrink: 0;
+    font-size: 1.8rem;
+    width: 45px;
+    height: 45px;
+  }
+
+  .info-content h4 {
+    font-size: 1rem;
+    margin-bottom: 0.4rem;
+  }
+
+  .info-content p {
+    font-size: 0.88rem;
+  }
+
+  .social-links {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: nowrap; 
+    gap: 0.4rem;
+    margin-top: 0.3rem; 
+    justify-content: flex-start; 
+  }
+
+  .social-link {
+    padding: 0.5rem 0.7rem; 
+    font-size: 0.8rem; 
+    white-space: nowrap; /
+  }
+
 }
 
-/* ========================================  MOBILE STYLES (max-width: 768px)  ======================================== */
+/* ========================================  MOBILE STYLES (max-width: 768px)  ======================================================= */
 @media (max-width: 768px) {
   
-  /* ===== NAVIGATION ===== */
+  /* ---- NAVIGATION ---- */
   .menu-toggle {
     display: block;
   }
@@ -330,7 +328,7 @@ body.menu-open {
     display: flex;
   }
 
-  /* ===== HEADER ===== */
+  /* ---- HEADER ---- */
   .nav-container {
     padding: 1em 5%;
   }
@@ -339,7 +337,7 @@ body.menu-open {
     font-size: 1.3rem;
   }
 
-  /* ===== HERO SECTION ===== */
+  /* ---- HERO SECTION ---- */
   .hero-text {
     padding: 0 5%;
   }
@@ -361,7 +359,7 @@ body.menu-open {
     font-size: 0.95rem;
   }
 
-  /* ===== STATS SECTION ===== */
+  /* ---- STATS SECTION ---- */
   .stats-section {
     grid-template-columns: 1fr;
     gap: 1.5em;
@@ -380,7 +378,7 @@ body.menu-open {
     font-size: 0.9rem;
   }
 
-  /* ===== FEATURED PERIOD ===== */
+  /* ---- FEATURED PERIOD ---- */
   .featured-period {
     padding: 4em 5%;
   }
@@ -412,7 +410,7 @@ body.menu-open {
     height: 200px;
   }
 
-  /* ===== TIMELINE SECTION ===== */
+  /* ----- TIMELINE SECTION ---- */
   .timeline-section {
     padding: 4em 5%;
   }
@@ -451,7 +449,7 @@ body.menu-open {
     height: 16px;
   }
 
-  /* ===== GALLERY SECTION ===== */
+  /* ---- GALLERY SECTION ---- */
   .section {
     padding: 4em 5%;
   }
@@ -476,12 +474,65 @@ body.menu-open {
     border-width: 6px;
   }
 
-  /* ==== ARTIST SPOTLIGHT =====*/
+    .era-section {
+    padding: 4em 5%;
+  }
+
+  .era-header {
+    margin-bottom: 2em;
+  }
+
+  .era-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .era-description-full {
+    display: none;
+  }
+
+  .era-description-mobile {
+    display: block;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #555;
+  }
+
+  .collections-title {
+    font-size: 1.5rem;
+    margin-bottom: 1.5em;
+  }
+
+  .collections-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5em;
+  }
+
+  .collection-card {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  }
+
+  .collection-card img {
+    height: 220px;
+  }
+
+  .collection-info {
+    padding: 1em;
+  }
+
+  .collection-info h4 {
+    font-size: 1rem;
+  }
+  
+  .collection-info p {
+    font-size: 0.9rem;
+  }
+
+  /* ---- ARTIST SPOTLIGHT ---- */
     .artist-spotlight .spotlight-image {
     display: none;
   }
   
-  /* ===== IDEA SECTION ===== */
+  /* ---- IDEA SECTION ---- */
   .idea-section {
     padding: 4em 5%;
   }
@@ -531,7 +582,7 @@ body.menu-open {
     font-size: 2rem;
   }
 
-  /* ===== ARTIST SECTION ===== */
+  /* ---- ARTIST SECTION ---- */
   .artist-category {
     padding: 2em 5%;
   }
@@ -587,7 +638,7 @@ body.menu-open {
     line-height: 1.4;
   }
   
-  /* ===== CONTACT PAGE ===== */
+  /* ---- CONTACT PAGE ---- */
   .contact-section {
     padding: 4rem 5%;
   }
@@ -668,7 +719,7 @@ body.menu-open {
     font-size: 0.85rem;
   }
 
-  /* ===== FOOTER ===== */
+  /* ---- FOOTER ---- */
     footer {
       flex-direction: column;
       text-align: center;
@@ -687,14 +738,15 @@ body.menu-open {
 
 }
 
-/* ========================================  SMALL MOBILE (max-width: 480px) ======================================== */
+/* ========================================  SMALL MOBILE (max-width: 480px) ======================================================== */
 @media (max-width: 480px) {
-  /* Navigation */
+
+  /* ---- Navigation ----*/
   nav {
     width: 85%;
   }
 
-  /* Hero Section */
+  /* ---- Hero Section ----*/
   .hero-text h1 {
     font-size: 1.8rem;
   }
@@ -706,7 +758,7 @@ body.menu-open {
     margin-right: auto;
   }
 
-  /* Typography - Headings */
+  /* ---- Typography - Headings ---- */
   .period-text h2,
   .timeline-section h2,
   .section h2,
@@ -714,18 +766,55 @@ body.menu-open {
     font-size: 1.7rem;
   }
 
-  /* Gallery */
+  /* ---- Gallery ---- */
   .gallery-scroll img {
     height: 200px;
     width: 280px;
   }
 
-  /* Stats */
+  .era-section {
+    padding: 3em 4%;
+  }
+
+  .era-header h2 {
+    font-size: 1.6rem;
+  }
+
+  .era-description-mobile {
+    font-size: 0.9rem;
+  }
+
+  .collections-title {
+    font-size: 1.3rem;
+    margin-bottom: 1.2em;
+  }
+
+  .collections-grid {
+    gap: 1.2em;
+  }
+
+  .collection-card img {
+    height: 200px;
+  }
+
+  .collection-info {
+    padding: 0.8em;
+  }
+
+  .collection-info h4 {
+    font-size: 0.95rem;
+  }
+
+  .collection-info p {
+    font-size: 0.85rem;
+  }
+
+  /* ---- Stats ---- */
   .stat-number {
     font-size: 2rem;
   }
 
-  /* Artist Section */
+  /* ---- Artist Section ---- */
   .artist-category {
     padding: 1.5em 4%;
   }
@@ -769,7 +858,7 @@ body.menu-open {
     line-height: 1.4;
   }
 
-  /* Contact Page */
+  /* ---- Contact Page ---- */
   .contact-section {
     padding: 3rem 5%;
   }
@@ -853,9 +942,26 @@ body.menu-open {
     width: 250px;
     height: 180px;
   }
+
+    .era-section {
+    padding: 2.5em 4%;
+  }
+
+  .era-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .era-description-mobile {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .collection-card img {
+    height: 180px;
+  }
 }
 
-/* ========================================  LANDSCAPE MOBILE FIX  ======================================== */
+/* ========================================  LANDSCAPE MOBILE FIX  ================================================================= */
 @media (max-height: 500px) and (orientation: landscape) {
   nav {
     overflow-y: auto;
@@ -867,7 +973,7 @@ body.menu-open {
   }
 }
 
-/* ======================================== PRINT STYLES ======================================== */
+/* ======================================== PRINT STYLES ========================================================================== */
 @media print {
   .menu-toggle,
   nav,
@@ -879,7 +985,7 @@ body.menu-open {
     display: none !important;
   }
 
-  /* Root styles */
+  /* ---- Root styles ---- */
   * {
     -webkit-print-color-adjust: exact !important;
     print-color-adjust: exact !important;
@@ -894,13 +1000,13 @@ body.menu-open {
     padding: 0;
   }
 
-  /* Page setup */
+  /* ----  Page setup ---- */
   @page {
     margin: 1.5cm;
     size: A4 portrait;
   }
 
-  /* Hero Section */
+  /* ---- Hero Section ---- */
   .hero-text h1 {
     font-size: 24pt;
     color: #000;
@@ -914,7 +1020,7 @@ body.menu-open {
     margin-bottom: 1.5em;
   }
 
-  /* Artist Section */
+  /* ----  Artist Section ---- */
   .artist-category {
     padding: 1em;
     background: white !important;
@@ -980,7 +1086,7 @@ body.menu-open {
     margin: 0.2em 0;
   }
 
-  /* Contact Page */
+  /* ---- Contact Page ---- */
   .contact-form-wrapper {
     border: 1.5px solid #333;
     page-break-inside: avoid;
@@ -1030,7 +1136,7 @@ body.menu-open {
     margin-bottom: 0.5em;
   }
 
-  /* Tables */
+  /* ---- Tables ---- */
   .inquiry-table {
     border-collapse: collapse;
     width: 100%;
@@ -1052,7 +1158,7 @@ body.menu-open {
     color: #000 !important;
   }
 
-  /* Links */
+  /* ---- Links ---- */
   a {
     color: #000;
     text-decoration: underline;
@@ -1088,13 +1194,13 @@ body.menu-open {
     height: auto;
   }
 
-  /* Orphan and widow control */
+  /* ---- Orphan and widow control ---- */
   p, li {
     orphans: 3;
     widows: 3;
   }
 
-  /* Footer */
+  /* ---- Footer ---- */
   footer {
     margin-top: 2em;
     padding-top: 1em;
@@ -1102,7 +1208,7 @@ body.menu-open {
     font-size: 9pt;
   }
 
-  /* Utility classes */
+  /*----  Utility classes ---- */
   .page-break-before {
     page-break-before: always;
   }
