@@ -27,6 +27,14 @@ body.menu-open {
   transition: all 0.3s ease;
 }
 
+.era-description-full {
+  display: none;
+}
+
+.era-description-mobile {
+  display: block;
+}
+
 /* ========================================  DESKTOP & LARGE SCREENS (min-width: 769px)  ======================================== */
 @media (min-width: 769px) {
 
@@ -47,9 +55,14 @@ body.menu-open {
     margin-right: auto;
   }
 
-  .era-description-mobile {
-   display: none !important;
-  }
+.era-description-full {
+     display: block !important;
+   }
+   
+   .era-description-mobile {
+     display: none !important;
+   }
+
 }
 
 /* ========================================  LARGE TABLET / SMALL DESKTOP (1025px - 1200px) ======================================== */
@@ -63,9 +76,6 @@ body.menu-open {
     height: 240px;
   }
 
-  .era-description-mobile {
-   display: none !important;
-  }
 }
 
 /* ======================================== TABLET STYLES (768px - 1024px)  ======================================================= */
@@ -156,10 +166,6 @@ body.menu-open {
 
   .timeline-dot {
     left: 30px;
-  }
-
-  .era-description-mobile {
-   display: none !important;
   }
 
   /* Artist Grid  */
